@@ -1,11 +1,18 @@
 {
   "name": "classnames-react-native",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pelmeh/classnames-react-native"
+  },
+  "author": {
+    "name": "pelmeh",
+    "email": "pelmeh@gmail.com"
+  },
   "license": "ISC"
 }
