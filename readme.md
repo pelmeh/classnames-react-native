@@ -1,16 +1,41 @@
+# ClassNames for React Native
+
+This library resolve styles merging in react-native 
+
+Like package `classNames` for regular React
+
+
+## Install
+
+Step one:
+> npm i classnames-react-native
+
+Step two:
+> Enjoy!
+
+## API 
+
+```
+classnames([styleObject][, [styleObject, conditions]])
+```
+
+
+## Examples
+
 Example #1
 
 ```js
-import classnames from 'classnames-react-native'
+import classNames from 'classnames-react-native'
 
 const A = { padding: 10 }
 const B = { backgroudColor: '#fff' }
 const C = { margin: 10 }
 
 classnames(A, [B, true], [C, false ])
+// classNames(styleObject, [styleObject, conditions], [styleObject, conditions])
 
 
-/*  classnames returns this styles:  */
+/*  classNames returns this styles:  */
 {
   padding: 10, // from object A
   backgroudColor: "#fff", // from object B (conditions is positive)
@@ -21,12 +46,11 @@ classnames(A, [B, true], [C, false ])
 Example #2
 
 ```js
-import classnames from 'classnames-react-native'
+import classNames from 'classnames-react-native'
 import StyleGuide from '../../style/xxx'
 import style from './style'
 
 class Example extends Component {
-  ...
   render() {
     const { wide = true, ghost = false } = this.props
     const style = classnames(
