@@ -53,7 +53,7 @@ import style from './style'
 class Example extends Component {
   render() {
     const { wide = true, ghost = false } = this.props
-    const style = classnames(
+    const style = classNames(
       StyleGuide.spacing.large,
       style.root,
       // or units style
