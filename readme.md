@@ -1,4 +1,5 @@
 Example #1
+
 ```js
 import classnames from 'classnames-react-native'
 
@@ -25,28 +26,34 @@ import StyleGuide from '../../style/xxx'
 import style from './style'
 
 class Example extends Component {
-    ...
-    render() {
-        const { wide = true, ghost = false } = this.props
-        const style = classnames(
-            StyleGuide.spacing.large,
-            style.root,
-            [style.wide, wide],
-            [style.transparent, ghost],
-        )
-        
-        /*
-         * classnames returns object, witch includes styles:
-         * spacing
-         * root
-         * wide
-         */
+  ...
+  render() {
+    const { wide = true, ghost = false } = this.props
+    const style = classnames(
+      StyleGuide.spacing.large,
+      style.root,
+      // or units style
+      [style.wide, wide],
+      // or union style
+      [
+        style.transparent, ghost,
+        style.fill, true,
+      ],
+    )
     
-        return (
-            <View style={style}>
-                ...
-            </View>
-        )
-    }
+    /*
+     * classnames returns object, witch includes styles:
+     * - spacing
+     * - root
+     * - wide
+     * - fill
+     */
+
+    return (
+        <View style={style}>
+            ...
+        </View>
+    )
+  }
 }
 ```
